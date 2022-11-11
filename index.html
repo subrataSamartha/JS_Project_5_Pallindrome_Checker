@@ -4,14 +4,58 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Document</title>
+
+    <style>
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+    </style>
   </head>
-  <body>
-    <div>
-      <h1>Pallindrum Checker</h1>
-      Enter a Number : <input type="number" name="" id="" data-input />
-      <input type="button" value="Submit" onclick="isPallendrum()" />
-      <h2 data-output></h2>
+  <body
+    class="flex flex-row justify-center items-center h-full border-2 border h-screen"
+    id="container"
+  >
+    <div
+      class="border border-slate-100 drop-shadow-md border-solid flex flex-col justify-center items-center gap-2 w-max rounded-lg p-10 bg-white"
+    >
+      <h1 class="text-7xl text-center text-slate-700 w-max mx-auto p-2">
+        Pallindrum Checker
+      </h1>
+      <!-- <div class="w-max"> -->
+      <!-- <label for="inputNum">Enter a Number : </label> -->
+      <input
+        type="number"
+        name=""
+        id="inputNum"
+        data-input
+        class="rounded outline-0 px-2 leading-8 shadow-none text-center mt-4 filter-nnone border border-slate-300 focus:border-slate-500 border-solid"
+        placeholder="Enter a number"
+      />
+      <!-- </div> -->
+      <div class="mt-2 flex gap-2">
+        <input
+          type="button"
+          value="Submit"
+          class="w-22 bg-green-600 hover:bg-green-700 text-white text-sm px-5 py-2 rounded cursor-pointer"
+          data-submit-btn
+        />
+        <input
+          type="button"
+          value="Reset"
+          class="w-22 bg-slate-200 hover:bg-slate-300 text-black text-sm px-5 py-2 rounded cursor-pointer drop-shadow-lg filter-none"
+          data-reset-btn
+        />
+      </div>
+      <h2
+        class="mt-4 border rounded-full border-slate-200 border-solid min-w-[500px] text-center drop-shadow-md p-1 bg-slate-100 transition duration-1000 ease-in-out"
+        data-output
+      >
+        Click on submit to check
+      </h2>
     </div>
     <script src="app.js"></script>
   </body>
